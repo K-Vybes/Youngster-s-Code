@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resturanteio</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                transition: background-color 0.5s, color 0.5s;
+            }
+
+            .slide-in {
+    animation: slideIn 2s ease-in-out;
+    animation-fill-mode: forwards;
+    
+    transform: translateY(-100%);
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+       
+    }
+}
+.nav {
+    top: 0;
+    left: 0;
+    width: 100%;
+   border-bottom: 1px dotted orange;
+   border-width: 3px;
+   border-width: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100; 
+   
+   
+}
+
+            #nav-2 {
+                display: flex;
+                align-items: center;
+
+
+                justify-content: space-around;
+             
+              
+            }
+    
+            .logo{
+                color: black;
+                font-weight: bold;
+                padding-left: 4px;
+               
+               
+            }
+            strong{
+                color: orange;
+            }
+            #nav-2 a{
+                padding: 5px 20px;
+                text-align: center;
+            }
+            
+            #nav-2 a:hover{
+             border: 1px dotted orange;
+             border-top: none;
+             border-left: none;
+             border-right: none;
+             border-width: 4px;
+             color: orange;
+            }
+            .search-container {
+  position: relative;
+}
+.fa-search{
+    color: orange;
+}
+
+.search-icon {
+  cursor: pointer;
+}
+.icon {
+  font-size: 20px;
+}
+input{
+    border-radius: 8px;
+    border: 1px solid orange;
+}
+
+.search-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 8px;
+}
+.dark-mode {
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        #theme-toggle {
+            cursor: pointer;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        #theme-toggle:hover {
+            color: orange;
+        }
+
+.nav-2,.navbar{
+    display: flex;
+}
+
+            .navbar,a{
+                list-style: none;
+                text-decoration: none;
+            }
+            a{
+                padding-right: 9px;
+            }
+            .nav{
+                width: 100%;
+               
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+            }
+           
+            
+            .navbar,a{
+                list-style: none;
+                text-decoration: none;
+            }
+            a{
+             color: black;
+                padding-right: 9px;
+            }
+            .active{
+                border: 1px solid transparent;
+                background-color: none;
+                border-radius: 4px;
+                padding-left: 3px;
+            }
+            
+            #color{
+                color: black;
+                
+            }
+            .drop{
+                display: inline;
+            }
+           .navdrop a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.drop .dropbtn {
+   
+   font-size: 16px; 
+   border: none;
+   outline: none;
+   color: black;
+   padding: 14px 16px;
+   background-color: inherit;
+   font-family: inherit; 
+  margin: 0;
+
+}
+.navdrop a:hover, .dropd:hover .dropbtn {
+    border: 1px dotted orange;
+             border-top: none;
+             border-left: none;
+             border-right: none;
+             border-width: 4px;
+            
+}
+.droplist {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top: 22px;
+  padding: 2px;
+  
+}
+.droplist a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.drop a:hover {
+    background-color: none;
+}
+
+.drop:hover .droplist {
+ display: block;
+}
+
+.food-conatiner{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 55px;
+}
+
+.food-conatiner img{
+  width: 300px;
+ height: 150px;
+ border-radius: 50%;
+ animation: paddingAnimation 2s infinite alternate;
+
+}
+@keyframes paddingAnimation{
+    0% {
+    padding: 10px;
+  }
+  50% {
+    padding: 20px;
+  }
+  100% {
+    padding: 10px;
+  }
+
+}
+#btn{
+   background-color: orange;
+    border-radius: 5px;
+    border-width: 4px;
+    padding: 1px 3px;
+    
+}
+#btn:hover{
+margin: 3px; 
+}
+h3{
+    text-align: center;
+  margin-top: 70px;
+  border: 1px dotted orange;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-width: 4px;
+    width: 40%;
+    margin-left: 250px;
+    margin-right: 250px;
+   
+}
+.dishes{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   margin: 70px;
+    
+    
+}
+.dish-1 img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: -20px;
+    position: relative;
+    
+}
+.dish-1{
+ background-color: orange;
+    border-width: 4px;
+    border-radius: 4px 6px;
+    padding: 10px;
+  
+}
+.dish-1:hover{
+    opacity: 0.9;
+    transform: scale(1.05);  
+
+}
+
+
+.dish-2 img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: -20px;
+    position: relative;
+
+}
+.dish-2{
+    background-color: orange;
+    border-width: 4px;
+    padding: 10px;
+    border-radius: 4px 6px;
+   
+}
+.dish-2:hover{
+    opacity: 0.9;
+    transform: scale(1.05);  
+}
+.dish-3 img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: -20px;
+    position: relative;
+
+}
+.dish-3{
+    background-color: orange;
+    border-width: 4px;
+    padding: 10px;
+    border-radius: 4px 6px;
+}
+.dish-3:hover{
+    opacity: 0.9;
+    transform: scale(1.05);  
+}
+.dish-4 img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: -20px;
+    position: relative;
+
+}
+.dish-4 {
+    background-color: orange;
+    border-width: 4px;
+    padding: 10px;
+    border-radius: 4px 6px;
+}
+.dish-4:hover{
+    opacity: 0.9;
+    transform: scale(1.05);  
+}
+
+footer{
+    background-color: orange;
+  width: 100%;
+  height: 100%;
+}
+.footercon{
+    display: flex;
+    justify-content: space-around;
+}
+h1{
+   padding-bottom: 20px;
+   text-align: center;
+}
+.follow{
+    font-weight: bold;
+    font-size: medium;
+}
+.style{
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #f9f9f9;
+    font-size: medium;
+}
+.support:hover{
+    transform: scale(1.05);  
+}
+.Menu:hover{
+    transform: scale(1.05);  
+}
+
+.fa-facebook{
+    color: #fff;
+}
+.fa-twitter{
+    color: #fff;
+
+}
+.fa-youtube{
+    color: #ffff;
+}
+.fa-facebook:hover{
+    transform: translateY(5px);
+    color:#3B5998;
+}
+.fa-twitter:hover{
+    transform: translateY(5px);
+    color:#55ACEE;
+}
+.fa-youtube:hover{
+    transform: translateY(5px);
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </style>
+    </head>
+    <body>
+        
+       <div class="main-container slide-in">
+
+        <div class="main-container">
+            <div class="conatiner">
+            
+                <div class="con">
+                   
+                   
+    
+                    <div class="nav">
+                        <div id="nav-2">
+                            <h2 class="logo">Resturant<strong>io</strong></h2>
+                        <a id="" href="#">Home</a>
+                        <a id="" href="#">About</a>
+            <div class="navdrop">
+                <div class="drop">
+                    <a style="display: flex;" id="" href="#" class="dropbtn" >Menu<img  src="down-arrow-svgrepo-com.svg" width="10"></a>
+                    <div class="droplist">
+                        <a href="#">burguers</a>
+                        <a href="#">French Fries</a>
+                        <a href="#">mac&cheese</a>
+                        <a href="#">rice with veges and meats</a>
+                    </div>
+                </div>
+            </div>
+                        
+                        <a id="" href="#">Service</a>
+                        
+                        </div>
+                     
+                        
+                       <form>
+                        <div class="navbar">
+                            <a class="active"></a>
+                            <a href=""></a>
+                            <a  id="color">
+                                <div class="search-container">
+                                    <div class="search-icon" onclick="toggleSearchBar()">
+                                     <i class="fa fa-search"></i>
+                                    </div>
+                                   
+                                    <form>
+                                 
+                                    <input type="search" id="search-bar" class="search-bar" placeholder="Search..." style="display: none;">
+                                  </form>
+                                  <script>
+                                    function toggleSearchBar() {
+                                      var searchBar = document.getElementById("search-bar");
+                                      searchBar.style.display = (searchBar.style.display === "none" || searchBar.style.display === "") ? "block" : "none";
+                                      searchBar.value = ""; // Clear the search bar when hiding it
+                                    }
+                                
+                                    // Add a click event listener to the document to hide the search bar when clicking outside of it
+                                    document.addEventListener("click", function (event) {
+                                      var searchContainer = document.querySelector(".search-container");
+                                      var searchBar = document.getElementById("search-bar");
+                                
+                                      // Check if the click event target is not inside the search container
+                                      if (!searchContainer.contains(event.target) && searchBar.style.display === "block") {
+                                        searchBar.style.display = "none";
+                                      }
+                                    });
+                                  </script>
+                                  </div>
+                                 
+                                 
+                            </a>
+                            <div id="theme-toggle" onclick="toggleDarkMode()">
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <script>
+                                function toggleDarkMode() {
+                                    var body = document.body;
+                                    body.classList.toggle("dark-mode");
+                                }
+                            </script>
+                          
+                         
+                       </div>
+                      
+                    </div>
+                </div>
+                <div class="food-conatiner">
+                    <div class="text">
+                        <h2>Order Your Best<br> Food anytime</h2>
+                        <P>Hey,our delicious food is waiting for you,<br> We are always near to you with fresh item of food</P><br>
+                        <a href="#" id="btn">Explore Food<span>&#8594;</span></a>
+    
+                    </div>
+                    <div  class="image">   
+                        <img src="images (7).jpeg" height="150">
+                       
+                    </div>
+                    
+                </div>
+               
+                <div class="dishconatiner">
+                    <h3>Popular Dishes</h3>
+
+                    <div class="dishes">
+                        <div class="dish-1">
+                           <img src="images (22).jpeg" height="40">
+
+                        </div>
+                        <div class="dish-2">
+                            <img src="download (16).jpeg" height="40">
+                            
+                        </div>
+                        <div class="dish-3">
+                            <img src="download (7).jpeg" height="40">
+                            
+                        </div>
+                        <div class="dish-4">
+                            <img src="download (15).jpeg" height="40">
+                            
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <h1>Resturante<strong>io</strong></h1>
+                    <div class="footercon">
+                        <div class="follow">
+                          <i class="fa fa-facebook"></i>  <i class="fa fa-youtube"></i> <i class="fa fa-twitter"></i>
+
+                        </div>
+                        <div class="support">
+                            <h4><v class="style">Support</v><br><br>Contact <br>FAQ<br>Location</h4>
+                            
+                        </div>
+                        <div class="Menu">
+                            <h4><v class="style">About Menu</v><br><br>Menu design<br>Careers<br>Menu Access</h4>
+
+                            
+                        </div>
+                        <div class="input">
+                            
+                        </div>
+                    </div>
+                </footer>
+       </div>
+       
+
+                
+    </body>
